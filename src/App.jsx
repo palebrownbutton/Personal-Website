@@ -70,10 +70,10 @@ function BuiltbyText() {
 }
 
 const sections = [
-  { title: 'About',        color: '#1a1a1a' },
-  { title: 'Projects',     color: '#222222' },
-  { title: 'Photography',  color: '#2b2b2b' },
-  { title: 'Contact',      color: '#343434' }
+  { title: 'About',        color: '#1a1a1a', className: 'about' },
+  { title: 'Projects',     color: '#222222', className: 'projects' },
+  { title: 'Photography',  color: '#2b2b2b', className: 'photos' },
+  { title: 'Contact',      color: '#343434', className: 'contact' }
 ];
 
 function App() {
@@ -85,12 +85,19 @@ function App() {
       </section>
 
       {sections.map((section, idx) => (
-        <section
-          key={idx}
-          className='section sticky'
-          style={{ backgroundColor: section.color, zIndex: sections.length + idx}}
-        >
-          <h2 className='title'>{section.title}</h2>
+        <section key={idx} className={`section sticky ${section.className}`} style={{ backgroundColor: section.color, zIndex: sections.length + idx }} >
+          {section.title == "About" ? (
+            <>
+              <div className='about-left'>
+                <h2 className='title'>About</h2>
+              </div>
+              <div className='about-right'>
+                <p className="paragraph">I’m a Bulgarian student developer based in London, mainly focused on backend development in Python. I’ve built apps in React Native, developed games with Godot, used Pygame in Python, and created web projects using React and CSS. Outside of coding, I’m a competitive rower, a commitment that has taught me discipline, teamwork and resilience.</p>
+              </div>
+            </>
+          ) : (
+            <h2 className='title'>{section.title}</h2>
+          )}
         </section>
       ))}
     </main>

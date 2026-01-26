@@ -61,6 +61,42 @@ body {
   }
 }
 
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0 80px;
+}
+
+.about-left, .about-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.about-left {
+  justify-content: center;
+}
+
+.about-right{
+  justify-content: center;
+}
+
+.about .title{
+  text-align: center;
+  margin: 0;
+}
+
+.about .paragraph {
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  padding: 0 40px;
+  max-width: 80%;
+}
+
 /* Background: very dark, almost black (#121212 or #242424)
 Accent / buttons / links: bright blue (#646cff like you already have)
 Highlights: light blue / cyan for hover or floating elements (#4fc3f7)
@@ -70,3 +106,5 @@ Text: off-white for readability (rgba(255,255,255,0.87)) */
 --bg-projects: #1e1e1e;
 --bg-photos: #20262e; 
 --bg-contact: #242424;*/
+
+/* I’m a Bulgarian student developer based in London, with a strong focus on backend development in Python and enough frontend experience to take projects end-to-end. I’ve built applications in React Native, developed games using Godot, worked with Pygame in Python, and used React and CSS for web projects. Outside of coding, I’m a competitive rower, and rowing is a big part of my life. */
