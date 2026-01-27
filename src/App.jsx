@@ -86,7 +86,7 @@ function App() {
       </section>
 
       {sections.map((section, idx) => (
-        <section key={idx} className={`section sticky ${section.className}`} style={{ backgroundColor: section.color, zIndex: sections.length + idx }} >
+        <section key={idx} className={`section sticky ${section.className}`} style={{ backgroundColor: section.color, zIndex: sections.length + idx, "--i": idx }} >
           {section.title == "About" ? (
             <>
               <ParticleBackground count={300} />
