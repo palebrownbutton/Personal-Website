@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import ParticleBackground from './About'
+import SpriteController from './Projects'
 
 function WelcomeText() {
   return (
@@ -87,21 +88,35 @@ function App() {
 
       {sections.map((section, idx) => (
         <section key={idx} className={`section sticky ${section.className}`} style={{ backgroundColor: section.color, zIndex: sections.length + idx, "--i": idx }} >
-          {section.title == "About" ? (
-            <>
-              <ParticleBackground count={300} />
-              <div className='about-left'>
-                <h2 className='title'>About</h2>
-              </div>
-              <div className='about-right'>
-                <p className="paragraph">I’m a Bulgarian student developer based in London, mainly focused on backend development in Python. I’ve built apps in React Native, developed games with Godot, used Pygame in Python, and created web projects using React and CSS. Outside of coding, I’m a competitive rower, a commitment that has taught me discipline, teamwork and resilience.</p>
-              </div>
-            </>
-          ) : (
-            <h2 className='title'>{section.title}</h2>
-          )}
-        </section>
-      ))}
+             {section.title === "About" ? (
+                <>
+                  <ParticleBackground count={300} />
+                  <div className="about-left">
+                    <h2 className="title">About</h2>
+                  </div>
+                  <div className="about-right">
+                    <p className="paragraph">
+                      I’m a Bulgarian student developer based in London, mainly
+                      focused on backend development in Python. I’ve built apps in
+                      React Native, developed games with Godot, used Pygame in Python,
+                      and created web projects using React and CSS. Outside of coding,
+                      I’m a competitive rower, a commitment that has taught me
+                      discipline, teamwork and resilience.
+                    </p>
+                  </div>
+                </>
+              ) : section.title === "Projects" ? (
+                 <>
+                  <SpriteController />
+                  <div>
+                    <h2 className='title'>Projects</h2>
+                  </div>
+                </>
+              ) : (
+                <h2 className="title">{section.title}</h2>
+              )}
+            </section>
+          ))}
     </main>
   )
 }
