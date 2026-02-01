@@ -41,7 +41,7 @@ export default function Carousel() {
 
   return (
     <div className="carousel">
-      <button onClick={prev}>←</button>
+      <button onClick={prev}><img className="arrow" src="src/assets/left_arrow2.png" width={80} height={80}/></button>
 
       <div className="viewport">
         <div
@@ -54,13 +54,13 @@ export default function Carousel() {
         >
           {extendedProjects.map((p, i) => (
             <div className="slide" key={i}>
-              <h3>{p.title}</h3>
+              <h3 className="header">{p.title}</h3>
             </div>
           ))}
         </div>
       </div>
 
-      <button onClick={next}>→</button>
+      <button onClick={next}><img className="arrow" src="src/assets/right_arrow2.png" width={80} height={80}/></button>
     </div>
   );
 }
