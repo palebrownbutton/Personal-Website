@@ -70,6 +70,7 @@
   overflow: hidden;
   isolation: isolate;
   top: -60px;
+  cursor: pointer;
 }
 
 .project-image-wrapper::before {
