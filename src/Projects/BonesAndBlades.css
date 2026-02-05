@@ -1,0 +1,27 @@
+.project-title {
+    position: absolute;
+    color: #fff;
+    font-size: 5rem;
+    font-family: "Indie Flower", cursive;
+    -webkit-text-stroke: 1px #000;
+    display: flex;
+    top: 0;
+    left: 50vh
+}
+
+.game-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #121212;
+    min-height: 100vh;
+}
+
+.game-frame {
+    width: 100%;
+    max-width: 1280px;
+    height: 80hv;
+    border: none;
+}

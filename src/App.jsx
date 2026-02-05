@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
+import BonesAndBlades from "./Projects/BonesAndBlades"
 import ParticleBackground from './About'
 import Carousel from './Projects'
 
@@ -78,7 +80,7 @@ const sections = [
   { title: 'Contact',      color: '#343434', className: 'contact' }
 ];
 
-function App() {
+function Home() {
   return (
     <main>
       <section className='section hero' style={{ backgroundColor: "#121212" }}>
@@ -96,9 +98,9 @@ function App() {
                   </div>
                   <div className="about-right">
                     <p className="paragraph">
-                      I’m a Bulgarian student developer based in London, mainly
+                      I’m a Bulgarian developer based in London, mainly
                       focused on backend development in Python. I’ve built apps in
-                      React Native, developed games with Godot, used Pygame in Python,
+                      React Native, developed games with Godot, used Pygame in Python
                       and created web projects using React and CSS. Outside of coding,
                       I’m a competitive rower, a commitment that has taught me
                       discipline, teamwork and resilience.
@@ -124,4 +126,14 @@ function App() {
   )
 }
 
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/bones-and-blades" element={<BonesAndBlades />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
 export default App
