@@ -24,11 +24,8 @@ def gardening(item: str):
         return {"error": f"No plant found for '{item}'."}
     plant = plants_data[0]
 
-    plant_info = {
-        "common_name": plant.get("common_name", "N/A"),
-        "scientific_name": plant.get("scientific_name", "N/A"),
-        "family": plant.get("family", "N/A"),
-        "image": plant.get("default_image", {}).get("small_url")
-    }
+    common = plant.get("common_name", "N/A")
+    scientific = plant.get("scientific_name", "N/A")
+    family = plant.get("family", "N/A")
 
-    return {"plant": plant_info}
+    return f"The {item} is commonly known as {common}, with the scientific name {scientific}, and belongs to the family {family}."
