@@ -188,6 +188,8 @@ function SpecialCowPage({ setPageFunction }) {
     const [thunderLeft, setThunderLeft] = useState("50%");
     const [tornadoes, setTornadoes] = useState([]);
 
+    const API_BASE = "https://personal-website-1z1a.onrender.com";
+
     const handleGetWeather = async () => {
         if (!city) return;
 
@@ -196,7 +198,7 @@ function SpecialCowPage({ setPageFunction }) {
 
         try {
             const res = await fetch(
-                `/api/weather?city=${city}`
+                `${API_BASE}/api/weather?city=${encodeURIComponent(city)}`
             );
             const data = await res.json();
             setWeather(data);
