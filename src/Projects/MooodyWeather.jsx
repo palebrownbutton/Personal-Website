@@ -16,16 +16,11 @@ export default function MooodyWeather(){
             <div className="game-inner">
                 <h1 className="project-title">Mooody Weather</h1>
 
-                <button onClick={() => setPage("special")} style={{
-                                                                marginTop: "20px",
-                                                                padding: "10px",
-                                                                borderRadius: "5px",
-                                                                cursor: "pointer",
-                                                            }}
-                >
-                    Launch Weather Demo
-                </button>
-
+                <div className="demo-wrapper">
+                    <div className="demo-container">
+                        <SpecialCowPage />
+                    </div>
+                </div>
                 <a
                 href="https://github.com/SafiaEzzahir/cow"
                 className="github-link"

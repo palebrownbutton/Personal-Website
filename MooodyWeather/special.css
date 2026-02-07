@@ -2,64 +2,72 @@
     position:absolute;
     z-index: 1;
     top: 0;
-    width: 100vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .cow_image {
     position: absolute;
-    bottom: 5vh;
+    bottom: 15%;
+    height: 300px;
     z-index: 4;
     transition: bottom 0.2s ease-out;
     cursor: pointer;
     bottom: 0;
 }
 
-.cow_image.jump {
-    bottom: 10vh;
+.special-cow-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
+.cow_image.jump {
+    bottom: 10%;
+}
 
 .green_grass {
     position:absolute;
     z-index: 2;
     bottom: 0;
-    width: 100vw;
-    height: 40vh;
+    width: 100%;
+    left: 0;
+    height: 30%;
+    object-fit: cover;
 }
-
 
 .sun {
     position:absolute;
     z-index: 4;
-    top: 0;
-    right: 0;
+    top: 0px;
+    right: -30px;
+    width: 300px;
 }
 
 .grey_cloud {
     position:absolute;
     z-index: 5;
-    top: 10vh;
-    width: 470px;
+    top: 10%;
+    width: 200px;
     height: auto;
-    margin-left: -80px;
-    margin-top: -90px;
 }
 
 .white_cloud {
     position:absolute;
     z-index: 6;
-    top: 10vh;
-    width: 470px;
+    top: 10%;
+    width: 200px;
     height: auto;
-    margin-left: -80px;
-    margin-top: -90px;
 }
 
 .rain {
     position: absolute;
     z-index: 3;
     width: auto;
-    height: 5vh;
+    height: 5%;
     animation-name: rainFall;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -67,10 +75,10 @@
 
 @keyframes rainFall {
     from {
-        transform: translateY(0);
+        transform: translateY(-10px);
     }
     to {
-        transform: translateY(120vh);
+        transform: translateY(500px);
     }
 }
 
@@ -78,7 +86,7 @@
     position: absolute;
     z-index: 3;
     width: auto;
-    height: 5vh;
+    height: 5%;
     animation-name: snowFall;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -86,10 +94,10 @@
 
 @keyframes snowFall {
     from {
-        transform: translateY(0);
+        transform: translateY(-10px);
     }
     to {
-        transform: translateY(120vh);
+        transform: translateY(500px);
     }
 }
 
@@ -97,14 +105,17 @@
     position:absolute;
     z-index: 1;
     top: 0;
-    width: 100vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .hail {
     position: absolute;
     z-index: 3;
     width: auto;
-    height: 5vh;
+    height: 5%;
     animation-name: hailFall;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -115,7 +126,7 @@
         transform: translateY(0);
     }
     to {
-        transform: translateY(120vh);
+        transform: translateY(120%);
     }
 }
 
@@ -123,23 +134,32 @@
   position:absolute;
     z-index: 1;
     top: 0;
-    width: 100vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .input_city {
     position: absolute;
-    top: 2vh;
-    left: 2vw;
+    top: 10px;
+    left: 10px;
     z-index: 10;
-    border-radius: 10%;
+    border-radius: 15px;
+    padding: 5px;
+    width: 130px;
+    font-size: 0.8rem;
 }
 
 .get_weather {
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.75rem;
     position: absolute;
-    top: 5vh;
-    left: 2vw;
+    top: 45px;
+    left: 10px;
     z-index: 10;
-    border-radius: 10%;
+    padding: 4px 10px;
+    border-radius: 15px;
 }
 
 .throbber-container {
@@ -174,13 +194,14 @@
 }
 
 .text {
-    position: fixed;
-    top: 2vh;
+    position: absolute;
+    top: 10px;
     left: 50%;
+    width: 60%;
+    font-size: 0.8rem;
+    padding: 8px;
     transform: translateX(-50%);
-
     background: rgba(0,0,0,0.4);
-    padding: 10px 16px;
     border-radius: 12px;
     backdrop-filter: blur(4px);
 
@@ -191,10 +212,9 @@
 
 .thunder {
     position: absolute;
-    top: 18vh;   
+    top: 18%;   
     z-index: 4;
-    height: 70vh;
-
+    height: 60%;
     animation: lightning 0.3s ease-out;
 }
 
@@ -214,9 +234,9 @@
 
 .tornado {
     position: absolute;
-    top: 30vh;
+    top: 20%;
     z-index: 6; 
-    height: 50vh;
+    height: 50%;
     width: auto;
     animation-duration: 5s;
     animation-timing-function: linear;
@@ -225,30 +245,30 @@
 
 .tornado.left {
     left: 0;
-    transform: translateX(-120vw);
+    transform: translateX(-120%);
     animation-name: moveRight;
 }
 
 .tornado.right {
     right: 0;
-    transform: translateX(120vw);
+    transform: translateX(120%);
     animation-name: moveLeft;
 }
 
 @keyframes moveRight {
-    from { transform: translateX(-120vw); }
-    to   { transform: translateX(120vw); }
+    from { transform: translateX(-120%); }
+    to   { transform: translateX(120%); }
 }
 
 @keyframes moveLeft {
-    from { transform: translateX(120vw); }
-    to   { transform: translateX(-120vw); }
+    from { transform: translateX(120%); }
+    to   { transform: translateX(-120%); }
 }
 
 .home_button {
     position: absolute;
-    top: 0;
-    right: 0; 
+    top: 0px;
+    right: 5px; 
     z-index: 10;
     width: auto;
     height: 100px;

@@ -17,6 +17,7 @@ import RainIMG from "./assets/rain.png";
 import SnowIMG from "./assets/snow.png";
 import HailIMG from "./assets/hail.png";
 
+
 function SpecialCowImage({ sad }) {
     const [cow, setCow] = useState({ x: 10, dir: 1 });
     const [jumping, setJumping] = useState(false);
@@ -30,12 +31,15 @@ function SpecialCowImage({ sad }) {
                 let nextX = prev.x + prev.dir * speed;
                 let nextDir = prev.dir;
 
-                if (nextX > 100 || nextX < 0) {
-                    nextX = Math.max(0, Math.min(100, nextX));
-                    nextDir = -prev.dir;
+                const leftBoundary = 0;
+                const rightBoundary = 82; 
+
+                if (nextX > rightBoundary || nextX < leftBoundary) {
+                    nextX = Math.max(leftBoundary, Math.min(rightBoundary, nextX));
+                    nextDir = -prev.dir; 
                 }
 
-                if (Math.random() < 0.01) nextDir = -nextDir;
+                if (Math.random() < 0.005) nextDir = -nextDir;
 
                 return { x: nextX, dir: nextDir };
             });
@@ -53,9 +57,7 @@ function SpecialCowImage({ sad }) {
         setTimeout(() => setJumping(false), 400);
     };
 
-    const cowImage = sad
-        ? SadCow
-        : SpecialCowImageIMG
+    const cowImage = sad ? SadCow : SpecialCowImageIMG;
 
     return (
         <img
@@ -67,6 +69,9 @@ function SpecialCowImage({ sad }) {
                 left: `${cow.x}%`,
                 transform: `scaleX(${cow.dir === 1 ? -1 : 1})`,
                 position: "absolute",
+                width: "auto",
+                height: "300px", 
+                cursor: "pointer",
             }}
         />
     );
@@ -259,7 +264,7 @@ function SpecialCowPage({ setPageFunction }) {
     }, [weather]);
 
     return (
-        <div>
+        <div className='special-cow-container'>
 
             <input
                 className="input_city"
