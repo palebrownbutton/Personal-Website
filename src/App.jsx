@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import './App.css'
 import BonesAndBlades from "./Projects/BonesAndBlades"
 import Jay from "./Projects/Jay"
+import MooodyWeather from './Projects/MooodyWeather'
 import ParticleBackground from './About'
 import Carousel from './Projects'
 
@@ -170,6 +171,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/bones-and-blades" element={<BonesAndBlades />} />
         <Route path="/jay" element={<Jay />} />
+        <Route path="/mooody-weather" element={<MooodyWeather/>} />
       </Routes>
     </BrowserRouter>
   )

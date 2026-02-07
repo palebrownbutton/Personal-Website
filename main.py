@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 from Jay import jay_execute 
+from MooodyWeather.weather import get_weather
 
 app = FastAPI(title="Jay API")
 
@@ -31,3 +32,7 @@ def execute_command(request: CommandRequest):
         response = str(response)
 
     return {"response": response}
+
+@app.get("/api/weather")
+def weather(city: str):
+    return get_weather(city)
