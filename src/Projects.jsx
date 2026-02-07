@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Projects.css";
 import actionshot from "./assets/actionshot.png";
@@ -42,7 +42,8 @@ const extendedProjects = [
 ];
 
 export default function Carousel() {
-  const [index, setIndex] = useState(1);
+  const savedIndex = localStorage.getItem("carouselIndex");
+  const [index, setIndex] = useState(savedIndex ? Number(savedIndex) : 1);
   const [isAnimating, setIsAnimating] = useState(false);
 
   const prev = () => {
@@ -67,6 +68,10 @@ export default function Carousel() {
     }
     setIsAnimating(false);
   };
+
+  useEffect(() => {
+    localStorage.setItem("carouselIndex", index);
+  }, [index])
 
   return (
     <div className="carousel">
