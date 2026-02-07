@@ -29,11 +29,15 @@ def cooking(item: str):
             else:
                 ingredients.append(ingredient.strip())
 
-    recipe_text = f"Recipe for {name}:\n"
-    recipe_text += f"Category: {category}\n"
-    recipe_text += f"Area: {area}\n"
-    recipe_text += f"Instructions: {instructions}\n"
-    recipe_text += "Ingredients:\n"
+    ecipe_text = (
+        f"Recipe for {name}\n"
+        f"{'-' * (len(name) + 11)}\n\n"
+        f"Category: {category}\n"
+        f"Origin: {area}\n\n"
+        f"Instructions:\n{instructions}\n\n"
+        f"Ingredients:\n"
+    )
+
     for ing in ingredients:
         recipe_text += f"- {ing}\n"
 

@@ -144,10 +144,8 @@ def ligue_results():
         if score_home is None or score_away is None:
             continue
         results.append(f"{home} {score_home} - {score_away} {away}")
-    return results
 
-def ligue_table():
-    url = "https://api.football-data.org/v4/competitions/FL1/standings"
-    headers = {'X-Auth-Token': _get_api()}
-    standings = requests.get(url, headers=headers).json()['standings'][0]['table']
-    return [f"{team['position']}. {team['team']['name']} - {team['points']} points" for team in standings]
+    if not results:
+        return "No completed Premier League matches yet."
+
+    return "Premier League results:\n" + "\n".join(results)
