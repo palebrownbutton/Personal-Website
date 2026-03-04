@@ -7,6 +7,7 @@ import MooodyWeather from './Projects/MooodyWeather'
 import ParticleBackground from './About'
 import Carousel from './Projects'
 import TagIt from './Projects/TagIt'
+import Contact from './Contact'
 
 function WelcomeText() {
   return (
@@ -77,10 +78,9 @@ function BuiltbyText() {
 }
 
 const sections = [
-  { title: 'About',        color: '#1a1a1a', className: 'about' },
-  { title: 'Projects',     color: '#222222', className: 'projects' },
-  { title: 'Photography',  color: '#2b2b2b', className: 'photos' },
-  { title: 'Contact',      color: '#343434', className: 'contact' }
+  { title: 'About', color: '#1a1a1a', className: 'about' },
+  { title: 'Projects', color: '#222222', className: 'projects' },
+  { title: 'Contact', color: '#2b2b2b', className: 'contact' }
 ];
 
 function Home() {
@@ -119,6 +119,11 @@ function Home() {
                   <div className="projects-carousel">
                     <Carousel />
                   </div>
+                </div>
+              ) : section.title == "Contact" ? (
+                <div className='contact-wrapper'>
+                  <h2 className='title'>Contact</h2>
+                  <Contact />
                 </div>
               ) : (
                 <h2 className="title">{section.title}</h2>

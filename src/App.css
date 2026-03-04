@@ -141,12 +141,3 @@ body {
   pointer-events: auto;
 }
 
-/* Background: very dark, almost black (#121212 or #242424)
-Accent / buttons / links: bright blue (#646cff like you already have)
-Highlights: light blue / cyan for hover or floating elements (#4fc3f7)
-Text: off-white for readability (rgba(255,255,255,0.87)) */
-
-/* --bg-about: #181818;
---bg-projects: #1e1e1e;
---bg-photos: #20262e; 
---bg-contact: #242424;*/
