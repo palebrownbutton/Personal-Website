@@ -18,7 +18,7 @@ const projects = [
   {  
     title: "TagIt", 
     image: logo, 
-    description: "A mobile app that helps recover lost items using QR Codes attached to belongings. When scanned, the owner receives an email and the finder can leave anonymous message about where the item was left. Users can manage multiple items and view the items' status through the app.", 
+    description: "A mobile app that helps recover lost items using QR Codes attached to belongings. When scanned, the owner receives an email and the finder can leave an anonymous message about where the item was left. Users can manage multiple items and view the items' status through the app.", 
     path: "/tagit"
   },
   { 
@@ -30,7 +30,7 @@ const projects = [
   { 
     title: "Jay", 
     image: jay, 
-    description: "A Python terminal based assistant that provides tools such as weather lookup, football score, drawing utilities, plant information and recipe database. It acts as a multi-purpose command line helper with different built-in features.", 
+    description: "A Python terminal based assistant that provides tools such as weather lookup, football scores, drawing utilities, plant information and recipes. It acts as a multi-purpose command line helper with different built-in features.", 
     path: "/jay"
   },
 ];
