@@ -24,7 +24,7 @@ const projects = [
   { 
     title: "Mooody Weather",
     image: cow, 
-    description: "An interactive weather app built with a React Native frontend and a Python backend which displays real-time weather data through a dynamic, character-based UI. A custom character reacts to conditions in a selected city, with backgrounds that adapt to weather states. This project demonstrates early experience with React Native.", 
+    description: "An interactive weather app built with a React frontend and a Python backend which displays real-time weather data through a dynamic, character-based UI. A custom character reacts to conditions in a selected city, with backgrounds that adapt to weather states. This project demonstrates early experience with React Native.", 
     path: "/mooody-weather"
   },
   { 
