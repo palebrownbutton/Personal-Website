@@ -12,6 +12,5 @@ It showcases who I am, the projects I’ve worked on and provides a simple way f
 ## Tech Stack
 
 - **React (JavaScript)**
-- **Vite**
 - **CSS**
 - Hosted on **simonavatcheva.com**
