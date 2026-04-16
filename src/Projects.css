@@ -71,8 +71,8 @@
 
 .project-image-wrapper {
   position: relative;
-  width: fit-content; 
-  height: 300px;   
+  width: fit-content;
+  height: auto;
   border-radius: 12px;
   overflow: hidden;  
   display: flex;
@@ -117,9 +117,9 @@
 
 .project-image {
   display: block;
-  width: 100%;    
-  height: 300px;  
-  object-fit: cover; 
+  width: auto;
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
   position: relative;
   z-index: 2;
@@ -379,18 +379,4 @@ button {
     color: #ffffff;
     opacity: 0.6;
     font-family: 'Comfortaa', cursive;
-}
-
-@media (max-width: 768px) {
-    .slide-content {
-        justify-content: flex-start;
-    }
-
-    .header {
-        margin-top: 28px;
-    }
-
-    .description {
-        margin-top: 16px;
-    }
 }
