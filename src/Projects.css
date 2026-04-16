@@ -383,14 +383,21 @@ button {
 
 @media (max-width: 768px) {
     .project-image-wrapper {
+        width: fit-content;
+        max-width: 100%;
         height: auto;
     }
 
+    .project-image-wrapper a {
+        display: block;
+        max-width: 100%;
+    }
+
     .project-image {
-        width: auto;
+        width: 100%;
         max-width: 100%;
         height: auto;
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .header {
