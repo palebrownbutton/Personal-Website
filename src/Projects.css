@@ -420,11 +420,17 @@ button {
         top: 0;
         width: 100%;
         max-width: 100%;
+        height: auto;
+        padding: 0;
     }
 
-    .project-image-wrapper a {
+    .project-image-wrapper::before {
         display: block;
         width: 100%;
+    }
+
+    .project-image-wrapper::after {
+        inset: 0;
     }
 
     .header {
