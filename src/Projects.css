@@ -383,21 +383,17 @@ button {
 
 @media (max-width: 768px) {
     .project-image-wrapper {
-        width: 80%; 
-        max-width: 280px;
-        height: auto; 
-        margin: 20px auto;
-        padding: 3px; 
-        display: flex;
         overflow: visible; 
-        aspect-ratio: auto; 
+        width: 70%;   
+        max-width: 250px;
     }
 
     .project-image-wrapper::before {
-        width: 200%;
-        height: 200%;
-        top: -50%;
-        left: -50%;
+        opacity: 1;      
+        width: 140%;   
+        height: 140%;
+        top: -20%;
+        left: -20%;
     }
 
     .project-image {
@@ -409,8 +405,14 @@ button {
     }
 
     .arrow {
-        transform: translateY(0); 
-        margin: 0 10px;
+        transform: translateY(0);
+        margin: 0 5px;
+        width: 40px; 
+        opacity: 1;
+    }
+
+    .carousel {
+        gap: 10px; 
     }
 
     .carousel button {
@@ -431,8 +433,24 @@ button {
     }
 
     .viewport {
-        height: auto; 
-        min-height: 500px;
-        padding: 20px 0;
+        height: auto;      
+        min-height: 100vh; 
+        padding: 40px 0;
+    }
+
+    .description {
+        font-size: 14px;  
+        line-height: 1.4;
+        padding: 0 20px; 
+        width: 90%;
+    }
+
+    .info {
+        font-size: 0.85rem;
+        padding: 0 10px;
+    }
+    
+    .header {
+        font-size: 28px; 
     }
 }
